@@ -10,7 +10,7 @@ const AdminAuthLayout = ({ children }: { children: React.ReactNode }) => {
 			>
 				
 					<Link
-						href='/'
+						href='https://apextradezone.vercel.app'
 						className='p-20 block'
 					>
 						<Image
