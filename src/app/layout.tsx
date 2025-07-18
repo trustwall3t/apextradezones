@@ -3,11 +3,11 @@ import './globals.css';
 import DynamicStyles from '@/components/DynamicStyles';
 import { Toaster } from 'sonner';
 export const metadata: Metadata = {
-	title: 'Apextradezone - Welcome | Regulated Broker in Copy Trading, Trade with Zero Spreads',
+	title: 'Finitetradezone - Welcome | Regulated Broker in Copy Trading, Trade with Zero Spreads',
 	description:
-		'Apextradezone is a regulated broker in copy trading, trade with zero spreads',
-	keywords: 'apextradezone, broker, copy trading, zero spreads',
-	authors: [{ name: 'Apextradezone' }],
+		'Finitetradezone is a regulated broker in copy trading, trade with zero spreads',
+	keywords: 'Finitetradezone, broker, copy trading, zero spreads',
+	authors: [{ name: 'Finitetradezone' }],
 };
 
 export default function RootLayout({

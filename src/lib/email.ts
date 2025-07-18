@@ -109,19 +109,19 @@ const emailStyles = `
 // Email templates
 export const emailTemplates: EmailTemplates = {
 	welcome: (name: string, email: string, token: string) => ({
-		subject: 'Welcome to apextradezones!',
+		subject: 'Welcome to finitetradezones!',
 		html: `
 		${emailStyles}
 		<div class="container">
-			<img src="https://www.apextradezones.vercel.app/logo.png" alt="apextradezones Logo" class="logo" />
-			<h1>Welcome to apextradezones, ${name}!</h1>
+			<img src="https://www.finitetradezones.vercel.app/logo.png" alt="finitetradezones Logo" class="logo" />
+			<h1>Welcome to finitetradezones, ${name}!</h1>
 			<p>Thank you for registering with us. We're excited to have you on board!</p>
 			<h4>Your Verification Token is: <strong>${token}</strong></h4>
 			<p>Verify your email by clicking the button below:</p>
-			<a href="https://apextradezones.vercel.app/auth/verify?email=${email}" class="button">Verify Email</a>
+			<a href="https://finitetradezones.vercel.app/auth/verify?email=${email}" class="button">Verify Email</a>
 			<p>If you have any questions, feel free to contact our support team.</p>
 			<div class="footer">
-				<p>Best regards,<br>The apextradezones Team</p>
+				<p>Best regards,<br>The finitetradezones Team</p>
 			</div>
 		</div>
 		`,
@@ -131,13 +131,13 @@ export const emailTemplates: EmailTemplates = {
 		html: `
 		${emailStyles}
 		<div class="container">
-			<img src="https://www.apextradezones.vercel.app/logo.png" alt="apextradezones Logo" class="logo" />
+			<img src="https://www.finitetradezones.vercel.app/logo.png" alt="finitetradezones Logo" class="logo" />
 			<h1>Password Reset Request</h1>
 			<p>You have requested to reset your password. Click the button below to reset your password:</p>
 			<a href="${data.link}" class="button">Reset Password</a>
 			<p>If you didn't request this, please ignore this email.</p>
 			<div class="footer">
-				<p>Best regards,<br>The apextradezones Team</p>
+				<p>Best regards,<br>The finitetradezones Team</p>
 			</div>
 		</div>
 		`,
@@ -147,11 +147,11 @@ export const emailTemplates: EmailTemplates = {
 		html: `
 		${emailStyles}
 		<div class="container">
-			<img src="https://www.apextradezones.vercel.app/logo.png" alt="apextradezones Logo" class="logo" />
+			<img src="https://www.finitetradezones.vercel.app/logo.png" alt="finitetradezones Logo" class="logo" />
 			<h1>Deposit Request</h1>
 			<p>You have requested to deposit <span class="amount">$${data.amount}</span> into your account.</p>
 			<div class="footer">
-				<p>Best regards,<br>The apextradezones Team</p>
+				<p>Best regards,<br>The finitetradezones Team</p>
 			</div>
 		</div>
 		`,
@@ -161,11 +161,11 @@ export const emailTemplates: EmailTemplates = {
 		html: `
 		${emailStyles}
 		<div class="container">
-			<img src="https://www.apextradezones.vercel.app/logo.png" alt="apextradezones Logo" class="logo" />
+			<img src="https://www.finitetradezones.vercel.app/logo.png" alt="finitetradezones Logo" class="logo" />
 			<h1>Deposit Confirmation</h1>
 			<p>Your deposit of <span class="amount">$${data.amount}</span> has been confirmed.</p>
 			<div class="footer">
-				<p>Best regards,<br>The apextradezones Team</p>
+				<p>Best regards,<br>The finitetradezones Team</p>
 			</div>
 		</div>
 		`,
@@ -175,11 +175,11 @@ export const emailTemplates: EmailTemplates = {
 		html: `
 		${emailStyles}
 		<div class="container">
-			<img src="https://www.apextradezones.vercel.app/logo.png" alt="apextradezones Logo" class="logo" />
+			<img src="https://www.finitetradezones.vercel.app/logo.png" alt="finitetradezones Logo" class="logo" />
 			<h1>Withdrawal Request</h1>
 			<p>You have requested to withdraw <span class="amount">$${data.amount}</span> from your account.</p>
 			<div class="footer">
-				<p>Best regards,<br>The apextradezones Team</p>
+				<p>Best regards,<br>The finitetradezones Team</p>
 			</div>
 		</div>
 		`,
@@ -189,11 +189,11 @@ export const emailTemplates: EmailTemplates = {
 		html: `
 		${emailStyles}
 		<div class="container">
-				<img src="https://www.apextradezones.vercel.app/logo.png" alt="apextradezones Logo" class="logo" />
+				<img src="https://www.finitetradezones.vercel.app/logo.png" alt="finitetradezones Logo" class="logo" />
 			<h1>Withdrawal Confirmation</h1>
 			<p>Your withdrawal of <span class="amount">$${data.amount}</span> has been confirmed.</p>
 			<div class="footer">
-				<p>Best regards,<br>The apextradezones Team</p>
+				<p>Best regards,<br>The finitetradezones Team</p>
 			</div>
 		</div>
 		`,
@@ -203,11 +203,11 @@ export const emailTemplates: EmailTemplates = {
 		html: `
 		${emailStyles}
 		<div class="container">
-			<img src="https://www.apextradezones.vercel.app/logo.png" alt="apextradezones Logo" class="logo" />
+			<img src="https://www.finitetradezones.vercel.app/logo.png" alt="finitetradezones Logo" class="logo" />
 			<h1>Trade Confirmation</h1>
 			<p>Trade of <span class="amount">$${data.amount} ${data.symbol}</span> with order type ${data.type} has been successfully executed.</p>
 			<div class="footer">
-				<p>Best regards,<br>The apextradezones Team</p>
+				<p>Best regards,<br>The finitetradezones Team</p>
 			</div>
 		</div>
 		`,
@@ -284,11 +284,11 @@ export const sendEmail = async <T extends keyof EmailData>(
 		console.log('Email subject:', subject);
 
 		const mailOptions = {
-			from: `"apextradezones" <${
-				process.env.EMAIL_FROM || 'noreply@apextradezones.com'
+			from: `"finitetradezones" <${
+				process.env.EMAIL_FROM || 'noreply@finitetradezones.com'
 			}>`,
-			replyTo: `"apextradezones Support" <${
-				process.env.EMAIL_FROM || 'noreply@apextradezones.com'
+			replyTo: `"finitetradezones Support" <${
+				process.env.EMAIL_FROM || 'noreply@finitetradezones.com'
 			}>`,
 			to,
 			subject,
