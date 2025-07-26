@@ -10,7 +10,7 @@ const AdminAuthLayout = ({ children }: { children: React.ReactNode }) => {
 			>
 				
 					<Link
-						href='https://finitetradezone.com'
+						href='https://finitedome.com'
 						className='p-20 block'
 					>
 						<Image
